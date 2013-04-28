@@ -21,7 +21,7 @@
     {{ endif }}
       <li>
         <article>
-          <h2><a href="{{ raw_url }}">{{ title }}</a></h2>
+          <h2><a href="{{ url }}">{{ title }}</a></h2>
           <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time>
 
           {{ if categories_list && tags_list }}
