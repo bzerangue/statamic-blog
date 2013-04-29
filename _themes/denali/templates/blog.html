@@ -8,10 +8,7 @@
 
 {{ else }}
 
-{{ entries:listing
-  folder="blog/{segment_2}"
-  limit="5"
-}}
+{{ entries:listing limit="5" }}
   {{ if no_results }}
   <p>Sorry there are no entries to display at this time.</p>
   {{ else }}
@@ -22,7 +19,7 @@
       <li>
         <article>
           <h2><a href="{{ url }}">{{ title }}</a></h2>
-          <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time>
+          <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{  date format="d/m/Y" }}</time>
 
           {{ if categories_list && tags_list }}
           <p>Filed under: {{ categories_url_list }} and tagged with: {{ tags_url_list }}</p>
